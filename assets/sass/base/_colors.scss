@@ -1,0 +1,16 @@
+/*
+/*  COLORS.SCSS  */
+
+    $colors: (
+        background: (
+            "base": rgb(255, 255, 255),
+        ),
+        foreground: (
+            "base": rgb(32, 32, 32), 
+            "accent": rgb(0,191,255),
+        )
+    );
+
+    @function getColor($color, $tone: "base") {
+        @return map-get(map-get($colors, $color), $tone);
+    } 

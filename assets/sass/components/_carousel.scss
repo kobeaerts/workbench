@@ -1,0 +1,91 @@
+/*
+/*  CAROUSEL.SCSS  */
+
+    .flickity-enabled {
+        margin-bottom: 50px;
+        
+        .flickity-prev-next-button {
+            position: absolute;
+            left: 25px; top: 50%;
+            
+            display: block;
+            width: 40px; height: 40px;
+            
+            margin: 0;
+            padding: 0;
+            
+            transform: translate(0, -50%);
+            
+            background-color: rgba(getColor("background"), .75);
+            fill: getColor("foreground", "accent");
+            
+            border: 0;
+            border-radius: 50%;
+            
+            transition: background-color .2s ease-in-out-cubic;
+                        
+            &:hover {
+                background-color: getColor("background");
+                svg {
+                    transform: scale(1.1);
+                }
+            }
+            
+            &.next {
+                left: auto;
+                right: 25px;
+            }
+            
+            svg {                
+                width: 16px; height: 16px;
+                
+                background-color: transparent;
+                
+                transition: transform .2s ease-in-out-cubic;
+            }
+        }
+        
+        .flickity-page-dots {
+            position: absolute;
+            left: 0; top: 100%; right: 0; bottom: -50px;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            list-style: none;
+            
+            .dot {
+                position: relative;
+                
+                width: 12px; 
+                height: 12px;
+                
+                margin: 0 3px;
+                
+                border: 2px solid getColor("foreground", "accent");
+                border-radius: 50%;
+                
+                cursor: pointer;
+                
+                &::after {
+                    content: "";
+                    
+                    position: absolute 0;
+                    
+                    background-color: getColor("foreground", "accent");
+                    
+                    transition: transform .2s linear;
+                    transform: scale(0);
+                }
+                
+                &:hover,
+                &.is-selected {
+                    &::after {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }

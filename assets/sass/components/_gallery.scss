@@ -1,0 +1,166 @@
+/*
+/*  GALLERY.SCSS  */
+
+    .gallery {
+        display: block;
+        
+        width: 100%;
+        height: auto;
+        
+        &--grid {
+            width: calc(100% + 10px);
+            margin-left: -5px;
+            
+            .grid-sizer {
+                display: block;
+                width: 50%;   
+            }
+            
+            .grid-item {
+                display: block;
+                
+                &::after {
+                    content: "";
+                    
+                    display: block;
+                    padding-top: 100%;
+                }
+                
+                &__image {
+                    position: absolute 5px;
+                    
+                    background-image: url("../../images/image-1.jpg");
+                    background-size: cover;
+                    background-position: center;   
+                }
+                
+                &--small {
+                    width: 50%;
+                    height: auto;
+                }
+
+                &--medium,
+                &--large {
+                    width: 100%;
+                    
+                    &::after {
+                        padding-top: 50%;   
+                    }
+                }
+            }
+            
+            &[min-width~="550px"] {
+                .grid-sizer {
+                    width: calc(100% / 3);   
+                }
+                
+                .grid-item {
+                    &--small {
+                        width: calc(100% / 3);   
+                    }
+
+                    &--medium {
+                        width: calc(100% / 3 * 2);
+                        
+                        &::after {
+                            padding-top: 50%;   
+                        }
+                    }
+                }
+            }
+            
+            &[min-width~="700px"] {
+                .grid-sizer {
+                    width: 25%;   
+                }
+                
+                .grid-item {
+                    &--small {
+                        width: 25%;   
+                    }
+
+                    &--medium {
+                        width: 50%;   
+                    }
+
+                    &--large {
+                        width: 75%; 
+                        
+                        &::after {
+                            padding-top: calc(100% / 3 * 2);   
+                        }
+                    }   
+                }
+            }
+            
+            &[min-width~="850px"] {
+                .grid-sizer {
+                    width: 20%;   
+                }
+                
+                .grid-item {
+                    &--small {
+                        width: 20%;   
+                    }
+
+                    &--medium {
+                        width: 40%;   
+                    }
+
+                    &--large {
+                        width: 60%;   
+                    }
+                }
+            }
+            
+            &[min-width~="1000px"] {
+                .grid-sizer {
+                    width: calc(100% / 6);   
+                }
+                
+                .grid-item {
+                    &--small {
+                        width: calc(100% / 6);   
+                    }
+
+                    &--medium {
+                        width: calc(100% / 6 * 2);   
+                    }
+
+                    &--large {
+                        width: calc(100% / 6 * 3);   
+                    }   
+                }
+            }
+        }
+        
+        &--carousel {
+            width: 100%;
+            height: 40vw;
+            
+            .resize-sensor {
+                transform: scale(0);   
+            }
+            
+            figure {
+                display: flex;
+                flex-direction: row;
+                
+                width: auto;
+                height: 100%;
+                
+                padding: 0 5px;
+
+                img {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    
+                    width: auto;
+                    height: 100%;
+                }
+                figcaption {
+                    display: none;   
+                }
+            }
+        }
+    }

@@ -1,0 +1,44 @@
+/*
+/*  LISTS.SCSS  */
+	
+	ol.list,
+	ul.list {
+		&:not(:last-child) {
+			margin-bottom: 1.25rem;
+		}
+	}
+
+    ol.list {
+		counter-reset: list;
+		
+        li {
+			list-style: none;
+			
+			&:before {
+				content: counters(list, ".") ". ";
+				counter-increment: list;	
+			}
+        }
+    }
+
+	ul.list {
+		li {
+			position: relative;
+            padding-left: 1.25em;
+
+			list-style: none;
+            
+            &:before {
+                content: "";
+                
+                position: absolute;
+                left: .35em; top: calc(50% - .15em);
+                
+                display: block;
+                width: .3em; height: .3em;
+                
+                background-color: getColor("foreground");
+                border-radius: 50%;
+            }	
+		}
+	}

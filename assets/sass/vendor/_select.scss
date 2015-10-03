@@ -1,0 +1,21 @@
+.select-select {
+    display: none;
+    /* For when we are on a small touch device and want to use native controls */
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+}
+
+.select-element {
+    position: absolute;
+    display: none;
+}
+
+.select-element.select-open {
+    display: block;
+}
+
+.select {
+    user-select: none;
+}
+

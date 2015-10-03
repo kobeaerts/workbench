@@ -1,0 +1,166 @@
+/*
+/*  PARAGRAPHS  */
+
+    .paragraphs {
+        width: 100%;
+        
+        padding: 0 $padding-sm;
+		
+		.paragraph {
+			width: 100%;
+			max-width: $paragraph-max-width;
+
+			margin: 0 auto;
+
+			&:last-child {
+				margin-bottom: 0;    
+			}
+
+			&--title {
+
+			}
+
+			&--body {
+				margin-bottom: 2.5rem;    
+			}
+
+            &--quote {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                
+                width: calc(100% - 150px);
+                max-width: 450px;
+                
+                margin-bottom: 1em;
+                
+                .quote__body {
+                    font-size: 2rem;
+                    line-height: 1.2;
+                    
+                    text-align: center;
+                }
+                
+                .quote__author {
+                    &::before {
+                        content: "-";
+                        
+                        margin-right: .5em;
+                    }
+                }
+            }
+            
+            &--quote-group {
+                margin-bottom: 2.5rem;   
+            }
+            
+			&--image {
+				margin-bottom: 2.5rem;
+				
+				img {
+					display: block;
+					width: calc(100% + (2 * #{$padding-sm})); height: auto;
+
+					margin-left: -$padding-sm;
+				}
+				
+				figcaption {
+					padding: .5em 0 0 0;
+					font-size: .8em;	
+				}
+			}
+            
+            &--gallery {
+                width: calc(100% + #{$padding-sm * 2});
+                max-width: none;   
+                
+                margin-left: -$padding-sm;
+                margin-bottom: 2.5rem;
+            }
+		}
+		
+		&[min-width~="500px"] {
+			padding: 0 $padding-lg;
+			
+			.paragraph {
+				&--image {
+					img {
+						width: calc(100% + (2 * #{$padding-lg})); 
+						margin-left: -$padding-lg;
+					}
+				}
+                
+                &--gallery {
+                    width: calc(100% + (2 * #{$padding-lg})); 
+				    margin-left: -$padding-lg; 
+                }
+			}
+		}
+		
+		&[min-width~="700px"] {
+			.paragraph {
+				&--image {
+					img {
+						width: calc(100% + (2 * #{$padding-xl}));
+						margin-left: -$padding-xl;
+					}
+				}
+                
+                &--quote {
+                    &.pull-left {
+                        float: left;
+                        
+                        width: 300px;
+                        
+                        margin: 0 1em 1em 0;
+                        
+                        .quote__body {
+                            text-align: left;
+                        }
+                    }
+                    
+                    &.pull-right {
+                        float: right;
+                        
+                        width: 300px;
+                        
+                        margin: 0 0 1em 1em;
+                        
+                        .quote__body {
+                            text-align: right;
+                        }
+                    }
+                }
+			}
+		}
+        
+        &[min-width~="900px"] {
+            .paragraph {
+                &--quote {
+                    &.pull-left {
+                        margin-left: -50px;   
+                    }
+                    
+                    &.pull-right {
+                        margin-right: -50px;   
+                    }
+                }
+            }
+        }
+        
+        &[min-width~="1000px"] {
+            .paragraph {
+                &--quote {
+                    &.pull-left {
+                        margin-left: -100px;   
+                    }
+                    
+                    &.pull-right {
+                        margin-right: -100px;   
+                    }
+                }
+            }
+        }
+    }
+
+    

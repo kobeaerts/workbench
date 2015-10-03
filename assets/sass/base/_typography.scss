@@ -1,0 +1,83 @@
+/*
+/*  TYPOGRAPHY  */
+
+    
+    /*
+    /*  HEADERS  */
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0 0 .75em 0;
+            padding: 0;
+
+            line-height: 1;
+            
+            small {
+                font-size: .8em;
+                font-weight: 400;
+                
+                white-space: nowrap;
+            }
+        }
+
+        h1 {
+            @include font-size(32);
+        }
+
+        h2 {
+            @include font-size(25);
+        }
+
+        h3 {
+            @include font-size(20);;     
+        }
+
+        h4 {
+            @include font-size(16);      
+        }
+    
+
+    /*
+    /*  PARAGRAPHS  */
+
+        p, a, ul, ol, li, label, input, textarea {
+            @include font-size(16);
+            
+            color: getColor("foreground", "base");
+        }
+
+        p, ul, ol , textarea {
+            line-height: 1.4;   
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: .5em;
+            }
+        }
+
+    
+    /*
+    /*  HORIZONTAL RULE  */
+
+        hr {
+            width: calc(100% - 4rem);
+            
+            margin: 1rem 2rem 2rem 2rem;
+            
+            border-bottom: 1px solid getColor("foreground", "base");
+        }
+
+    /*
+    /*  LINK STYLING  */
+
+        a {
+            color: getColor("foreground", "base");
+            text-decoration: underline;
+            
+            &:hover,
+            &:active,
+            &:focus,
+            &.active {
+                color: getColor("foreground", "accent");   
+            }
+        }

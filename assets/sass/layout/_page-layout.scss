@@ -1,0 +1,30 @@
+/*
+/*  LAYOUT.SCSS  */
+
+    html,
+    body {
+        font-family: sans-serif;
+        font-size: 14px;
+        
+        background-color: getColor("background");
+        color: getColor("foreground");
+        
+        overflow-x: hidden;
+        
+        @media (min-width: $mobile-sm-min-width) {
+            font-size: 15px;   
+        }
+        
+        @media (min-width: $tablet-sm-min-width) {
+            font-size: 16px;   
+        }
+    }
+
+    body {
+        min-height: 100vh;
+        min-width: 100Vw;
+    }
+
+	.container {
+		padding: 2rem;	
+	}

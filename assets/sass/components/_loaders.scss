@@ -1,0 +1,41 @@
+/*
+/*  LOADERS.SCSS  */
+
+    .page-loader {
+        position: fixed 0;
+        z-index: 9999;
+        
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        justify-content: center;
+        
+        background-color: getColor("background");
+        
+        &__block {
+            display: block;
+            width: 5rem; height: 5rem;
+            
+            background-color: getColor("foreground", "accent");
+            
+            animation: loading-animation 1.25s infinite ease;
+        }
+        
+        &__text {
+            margin: 1.25em 0 0 0;
+            font-size: 1.25rem;
+        }
+    }
+
+    @keyframes loading-animation {
+        0% {
+            transform: perspective(120px);
+        }
+        50% {
+            transform: perspective(120px) rotateY(180deg);
+        }
+        100% {
+            transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+        }
+    }

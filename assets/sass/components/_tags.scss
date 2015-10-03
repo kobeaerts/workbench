@@ -1,0 +1,26 @@
+/*
+/*  TAGS.SCSS  */
+
+    .tags {
+        &__tag {
+            display: inline-block;
+            
+            margin: .25em .5em .25em 0;
+            padding: .25em .5em;
+            
+            text-decoration: none;
+            
+            background-color: getColor("foreground", "accent");
+            color: getColor("background", "base");
+            
+            border-radius: .25em;
+            
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: underline;
+                
+                color: getColor("background", "base");
+            }
+        }
+    }
