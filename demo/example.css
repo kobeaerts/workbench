@@ -1,18 +1,32 @@
 @import url(https://fonts.googleapis.com/css?family=Changa+One);
 
 .container.header {
+    margin-bottom: 10px;
+    
     text-align: center;
     
     background-color: #0074D9; 
     color: #fff;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
-.container.header img {
+.container.header svg {
     display: block;
-    width: 100px;
+    width: 150px;
     height: auto;
     
-    margin: 0 auto 2.5rem auto;
+    margin: 0 auto;
+    
+    fill: #fff;
+    stroke: rgba(255, 255, 255, 0);
+    
+    transition: fill .3s ease, stroke .3s ease;
+}
+
+.container.header svg:hover {
+    fill: rgba(255, 255, 255, 0);
+    stroke: #fff;
 }
 
 .container.header h1 {
@@ -27,4 +41,8 @@
     max-width: calc(800px - 2rem);
     
     margin: 0 auto;
+}
+
+.container.footer {
+    font-size: 12px;   
 }
