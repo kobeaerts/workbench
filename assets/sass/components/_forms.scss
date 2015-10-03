@@ -10,7 +10,6 @@
     input[type="text"],
     textarea,
     .select-target {  
-        margin-bottom: .5em;
         padding: .5em 1.5em .5em .5em;
         
         border: 1px solid #eee;
@@ -109,5 +108,63 @@
             color: getColor("foreground");
             
             border-color: getColor("foreground", "accent");
+        }
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 400px;
+    }
+
+
+/*
+/*  FORM ITEMS  */
+
+    .form-item {
+        label {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        & + .form-item {
+            padding-top: .5em;   
+        }
+        
+        &--text {
+            input {
+                &:not(:first-child) {
+                    margin-left: 1em;
+                }
+            }
+        }
+        
+        &--select {
+            label > span {
+                margin-right: 1em;   
+            }
+        }
+        
+        &--radio {
+            label {
+                
+                padding: .25em 0;
+                
+                &:first-child {
+                    padding-top: 0;   
+                }
+                
+                &:last-child {
+                    padding-bottom: 0;   
+                }
+                
+                input {
+                    margin-right: .5em;   
+                }
+            }
+        }
+        
+        & + h3 {
+            margin-top: 1.5em;   
         }
     }

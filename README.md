@@ -1,6 +1,8 @@
 # workbench
 A basic frontend boilerplate with some opinionated gulp magic
 
+Demo: [http://kobeaerts.github.io/workbench/](http://kobeaerts.github.io/workbench/)
+
 ## getting started
 Just copy the **assets** and **dist** folders and the **gulpfile.js** and **package.json** files to your project run `npm install` and you're done.
 
@@ -28,6 +30,10 @@ Run `gulp compile-js`to minify the javascript and `gulp optimize-images` to comp
 * Optimize other images
 * Concat and minify javascript files
 * Livereload on filechanges
+
+## bonus: a modular paragraph system
+A system to mix titles, text, images, quotes, grids and carousels.
+Check the [demo](http://kobeaerts.github.io/workbench/) on how it works.
 
 
 

@@ -28,8 +28,8 @@
                 
                 &__image {
                     position: absolute 5px;
-                    
-                    background-image: url("../../images/image-1.jpg");
+
+                    background-color: getColor("foreground", "accent");
                     background-size: cover;
                     background-position: center;   
                 }
