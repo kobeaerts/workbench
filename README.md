@@ -1,6 +1,12 @@
 # workbench
 A basic frontend boilerplate with some opinionated gulp magic
 
+## getting started
+Just copy the **assets** and **dist** folders and the **gulpfile.js** and **package.json** files to your project run `npm install` and you're done.
+
+Compile your sass with the `gulp watch` command.
+Run `gulp compile-js`to minify the javascript and `gulp optimize-images` to compress your images
+
 ## whats in the css
 * [Sanitize.css](https://10up.github.io/sanitize.css/) as a css reset
 * Responsive typography with rem units
@@ -23,10 +29,5 @@ A basic frontend boilerplate with some opinionated gulp magic
 * Concat and minify javascript files
 * Livereload on filechanges
 
-## getting started
-Just copy the **assets** and **dist** folders and the **gulpfile.js** and **package.json** files to your project run npm install to install all the dependencies and done.
-
-Compile your sass with the `gulp watch` command.
-Run `gulp compile-js`to minify the javascript and `gulp optimize-images` to compress your images
 
 
