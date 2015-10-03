@@ -11,6 +11,7 @@
         <!-- OG INFORMATION -->
         
         <!-- viewport  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
     </head>
     
@@ -67,22 +68,49 @@
         <div class="container">
 			<h2>Form elements</h2>
 			<h3>Input</h3>
-			<input type="text" placeholder="test" />
+            <div class="form-item form-item--text">
+                <input type="text" placeholder="text input" />
+            </div>
+            <div class="form-item form-item--text">
+                <label>
+                    <span>Text label:</span>
+                    <input type="text" name="text1" placeholder="" />
+                </label>
+            </div>
 
 			<h3>Select</h3>
 			<p>All selects get replaced by the select.js library for better theming</p>
-			<select>
-				<option>Hey</option>
-				<option>Hey</option>
-				<option>Hey</option>
-			</select>
+			<div class="form-item form-item--select">
+                <select>
+                    <option>Hey</option>
+                    <option>Hey</option>
+                    <option>Hey</option>
+                </select>
+            </div>
+            
+            <div class="form-item form-item--select">
+                <label>
+                    <span>Select something:</span>
+                    <select>
+                        <option>Hey</option>
+                        <option>Hey</option>
+                        <option>Hey</option>
+                    </select>
+                </label>
+            </div>
 
 			<h3>Textarea</h3>
-			<textarea placeholder="invullen pls"></textarea>
+            <div class="form-item form-item--textarea">
+                <textarea placeholder="invullen pls"></textarea>
+            </div>
 
 			<h3>Radiobuttons</h3>
-			<label for="radio">Hey:</label><input type="radio" name="test" />
-
+            <div class="form-item form-item--radio">
+                <label><input type="radio" name="test" value="value1" /> Option 1</label>
+                <label><input type="radio" name="test" value="value2" /> Option 2</label>
+                <label><input type="radio" name="test" value="value3" /> Option 3</label>
+            </div>
+            
         </div>
         
         <div class="container">
@@ -102,19 +130,20 @@
             </div>
             
             <div class="paragraph paragraph--body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>            
+                <p>Use the classes to make a mix of text, quotes, titles, images, image grids and image carousels. Fully responsive!</p>            
             </div>
             
             <div class="paragraph paragraph--title">
-                <h3>A small title paragraph</h3>
+                <h3>This is a title paragraph</h3>
             </div>
             
             <div class="paragraph paragraph--body">
+                <p>An body paragraph filled with lorem ipsum</p>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             
             <div class="paragraph paragraph--title">
-                <h3>Image paragraph without caption down under here</h3>
+                <h3>An image paragraph without caption</h3>
             </div>
             
             <div class="paragraph paragraph--image">
@@ -135,7 +164,7 @@
             </div>
         
 			<div class="paragraph paragraph--body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Images are wrapped in figure tags with a optional figcaption tag</p>
             </div>
             
             <div class="paragraph paragraph--title">
@@ -147,47 +176,40 @@
                 <div class="gallery gallery--grid">
                     <div class="grid-sizer"></div>
                     <div class="grid-item grid-item--small">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/bear.jpg')"></div>
                     </div>
                     <div class="grid-item grid-item--small">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/frog.jpg')"></div>
                     </div>
                     <div class="grid-item grid-item--large">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/worm.jpg')"></div>
                     </div>
                     <div class="grid-item grid-item--small">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/image-1.jpg')"></div>
                     </div>
                     <div class="grid-item grid-item--medium">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/shark.jpg')"></div>
                     </div>
                     <div class="grid-item grid-item--medium">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/city.jpg')"></div>
                     </div>
                     <div class="grid-item grid-item--large">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/street.jpg')"></div>
                     </div>
                     <div class="grid-item grid-item--medium">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/undersea.jpg')"></div>
                     </div>
                     <div class="grid-item grid-item--medium">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/rockwerchter.jpg')"></div>
                     </div>
                     <div class="grid-item grid-item--small">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/piano.jpg')"></div>
                     </div>
                     <div class="grid-item grid-item--small">
-                        <div class="grid-item__image"></div>
-                    </div>
-                    <div class="grid-item grid-item--small">
-                        <div class="grid-item__image"></div>
+                        <div class="grid-item__image" style="background-image: url('images/frog.jpg')"></div>
                     </div>
                 </div>
                 
-            </div>
-            
-            <div class="paragraph paragraph--body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             
             <div class="paragraph paragraph--title">
@@ -218,24 +240,12 @@
             </div>
             
             <div class="paragraph paragraph--title">
-                <h3>A small title paragraph</h3>
-            </div>
-            
-            <div class="paragraph paragraph--body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h3>How quotes work</h3>
             </div>
             
             <div class="paragraph paragraph--quote pull-left">
-                <p class="quote__body">A little quote tekst to quote things</p>
+                <p class="quote__body">This is a quote pulled to the left</p>
                 <span class="quote__author">Author of the quote</span>
-            </div>
-            
-            <div class="paragraph paragraph--body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            
-            <div class="paragraph paragraph--body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             
             <div class="paragraph paragraph--body">
@@ -243,7 +253,7 @@
             </div>
             
             <div class="paragraph paragraph--quote pull-right">
-                <p class="quote__body">A little quote tekst to quote things</p>
+                <p class="quote__body">This quote is pulled to the right</p>
                 <span class="quote__author">Author of the quote</span>
             </div>
             
@@ -251,13 +261,13 @@
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             
-            <div class="paragraph paragraph--body">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="paragraph paragraph--quote">
+                <p class="quote__body">Hey, you can also center me!</p>
+                <span class="quote__author">Author of the quote</span>
             </div>
             
-            <div class="paragraph paragraph--quote pull-right">
-                <p class="quote__body">A little quote tekst to quote things</p>
-                <span class="quote__author">Author of the quote</span>
+            <div class="paragraph paragraph--body">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
 			
         </div>
