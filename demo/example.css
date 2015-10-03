@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Changa+One);
+
+.container.header {
+    text-align: center;
+    
+    background-color: #0074D9; 
+    color: #fff;
+}
+
+.container.header img {
+    display: block;
+    width: 100px;
+    height: auto;
+    
+    margin: 0 auto 2.5rem auto;
+}
+
+.container.header h1 {
+    margin-bottom: .25em;
+    
+    font-family: "Changa One";
+    font-size: 2.5rem;
+}
+
+.container:not(.header) {
+    width: 100%;
+    max-width: calc(800px - 2rem);
+    
+    margin: 0 auto;
+}

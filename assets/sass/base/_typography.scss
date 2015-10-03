@@ -41,8 +41,6 @@
 
         p, a, ul, ol, li, label, input, textarea {
             @include font-size(16);
-            
-            color: getColor("foreground", "base");
         }
 
         p, ul, ol , textarea {
