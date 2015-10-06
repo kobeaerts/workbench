@@ -87,33 +87,9 @@
         }
     }
 
-    
-    button,
-    .button {        
-        padding: .5em 1.25em;
-        
-        line-height: 1;
-        text-decoration: none;
-        
-        border: 1px solid #eee;
-        border-radius: .3em;
-    
-        cursor: pointer;
-        
-        &:hover,
-        &:focus,
-        &:active {
-            outline: none;
-            
-            color: getColor("foreground");
-            
-            border-color: getColor("foreground", "accent");
-        }
-    }
-
     textarea {
         width: 100%;
-        max-width: 400px;
+        max-width: 500px;
     }
 
 
@@ -124,24 +100,28 @@
         label {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
+            
             align-items: center;
         }
         
         & + .form-item {
-            padding-top: .5em;   
+            padding-top: 1em;   
         }
         
         &--text {
-            input {
-                &:not(:first-child) {
-                    margin-left: 1em;
-                }
+            span {
+                margin-right: 1em;  
+                
+                line-height: 2;
             }
         }
         
         &--select {
             label > span {
-                margin-right: 1em;   
+                margin-right: 1em;  
+                
+                line-height: 2;
             }
         }
         
@@ -164,7 +144,9 @@
             }
         }
         
-        & + h3 {
+        & + h2,
+        & + h3,
+        & + h4 {
             margin-top: 1.5em;   
         }
     }

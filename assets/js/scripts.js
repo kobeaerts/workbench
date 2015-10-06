@@ -44,8 +44,7 @@ $(window).load( function() {
         $('.gallery--carousel').flickity({
             cellAlign: 'center',
             wrapAround: true,
-            contain: true,
-            setGallerySize: false
+            contain: true
         });
     
     

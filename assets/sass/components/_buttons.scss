@@ -3,5 +3,41 @@
 
     button,
     .button {
-           
+        display: inline-block;
+        margin: .2em .2em .2em 0;
+        padding: .5em 1.25em;
+        
+        line-height: 1;
+        text-decoration: none;
+        
+        border: 1px solid #eee;
+        border-radius: .3em;
+    
+        cursor: pointer;
+        
+        transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+        
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+            
+            color: getColor("foreground");
+            
+            border-color: getColor("foreground", "accent");
+        }
+    }
+
+    .button-filled {
+        @extend .button;
+        
+        background-color: getColor("foreground", "accent");
+        
+        border-color: getColor("foreground", "accent");
+        
+        &:hover,
+        &:focus, 
+        &:active {
+            background-color: getTint(getColor("foreground", "accent"));    
+        }
     }
