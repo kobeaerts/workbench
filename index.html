@@ -34,12 +34,23 @@
         </div>
         
         <div class="container">
-            <p>Workbench is a frontend boilerplate build for faster development. Out of the box it includes responsive typography, some basic styling and a paragraph system</p>
+            <p>Workbench is a frontend boilerplate build for faster development. Out of the box it includes responsive typography, some basic styling and a paragraph system.</p>
             <p>Workbench is <strong>not</strong> a frontend framework, it is a starting point for new projects to be customized to the need of your project.</p>
         </div>
         
         <div class="container">
-			<h2>Typography</h2>
+            <h2>Automation with gulp</h2>
+            <p>Run <strong>gulp watch</strong> to compile your sass, run it through autoprefixer and <a href="http://simplaio.github.io/rucksack/" target="_blank">rucksack</a>, base64 small images in your css and minimize the whole package.</p>
+            <p>Gulp watch also checks for changes in your js files and automaticly concats and minimizes all your files.</p>
+            <p>You can optimize the images in the images folder by running <strong>gulp optimize-images</strong>.</p>
+        </div>
+            
+        <div class="container">
+            <h2>Styles</h2>
+        </div>
+        
+        <div class="container">
+			<h3>Typography</h3>
 			<h1>Header 1 <small>3.375rem / 54px</small></h1>
 			<h2>Header 2 <small>2.25rem / 36px</small></h2>
 			<h3>Header 3 <small>1.5rem / 24px</small></h3>
@@ -48,7 +59,7 @@
         </div>
         
         <div class="container">
-			<h2>Links &amp; buttons</h2>
+			<h3>Links &amp; buttons</h3>
             <p>Add a .button or .button-filled class to a link to make it look like a button</p>
             <p>
                 <a href="index.html">basic link</a><br />
@@ -59,15 +70,15 @@
         </div>
         
         <div class="container">
-			<h2>Lists</h2>
-			<h3>Unordered list</h3>
+			<h3>Lists</h3>
+			<h4>Unordered list</h4>
 			<ul class="list">
 				<li>lijst</li>
 				<li>lijst</li>
 				<li>lijst</li>
 			</ul>
 
-			<h3>Ordered list</h3>
+			<h4>Ordered list</h4>
 			<ol class="list">
 				<li>lijst</li>
 				<li>lijst</li>
@@ -77,8 +88,8 @@
         </div>
         
         <div class="container">
-			<h2>Form elements</h2>
-			<h3>Input</h3>
+			<h3>Form elements</h3>
+			<h4>Input</h4>
             <div class="form-item form-item--text">
                 <input type="text" placeholder="text input" />
             </div>
@@ -89,7 +100,7 @@
                 </label>
             </div>
 
-			<h3>Select <small>needs the select.js library</small></h3>
+			<h4>Select <small>needs the select.js library</small></h4>
 			<div class="form-item form-item--select">
                 <select>
                     <option>Hey</option>
@@ -109,12 +120,12 @@
                 </label>
             </div>
 
-			<h3>Textarea</h3>
+			<h4>Textarea</h4>
             <div class="form-item form-item--textarea">
                 <textarea placeholder="Fill me in pls"></textarea>
             </div>
 
-			<h3>Radiobuttons</h3>
+			<h4>Radiobuttons</h4>
             <div class="form-item form-item--radio">
                 <label><input type="radio" name="test" value="value1" />Option 1</label>
                 <label><input type="radio" name="test" value="value2" />Option 2</label>
@@ -124,7 +135,7 @@
         </div>
         
         <div class="container">
-			<h2>Tags</h2>
+			<h3>Tags</h3>
 			<div class="tags">
 				<span class="tags__tag">kobeaerts</span>
 				<a href="index.html" class="tags__tag">tag 2</a>
