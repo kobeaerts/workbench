@@ -40,7 +40,15 @@
         }
 
         h4 {
-            @include font-size(16);      
+            @include font-size(16); 
+            
+            small {
+                font-size: .8em;   
+            }
+            @media (min-width: $mobile-sm-min-width) {
+                small {
+                }
+            }
         }
 
     
