@@ -6,7 +6,7 @@
     /*  HEADERS  */
 
         h1, h2, h3, h4, h5, h6 {
-            margin: 0 0 .75em 0;
+            margin: 0 0 .5em 0;
             padding: 0;
 
             line-height: 1;
@@ -16,24 +16,33 @@
                 font-weight: 400;
                 
                 white-space: nowrap;
+                
+                opacity: .75;
+            }
+            
+            @media (min-width: $mobile-sm-min-width) {
+                small {
+                    font-size: .6em;   
+                }
             }
         }
 
         h1 {
-            @include font-size(32);
+            @include font-size(45);
         }
 
         h2 {
-            @include font-size(25);
+            @include font-size(36);
         }
 
         h3 {
-            @include font-size(20);;     
+            @include font-size(24);;     
         }
 
         h4 {
             @include font-size(16);      
         }
+
     
 
     /*
@@ -49,28 +58,31 @@
 
         p {
             &:not(:last-child) {
-                margin-bottom: .5em;
+                margin-bottom: .75em;
             }
         }
 
     
     /*
-    /*  HORIZONTAL RULE  */
+    /*  TEXT TRANSFORMS  */
 
-        hr {
-            width: calc(100% - 4rem);
-            
-            margin: 1rem 2rem 2rem 2rem;
-            
-            border-bottom: 1px solid getColor("foreground", "base");
+        .uppercase {
+            text-transform: uppercase;
         }
+
+        .lowercase {
+            text-transform: lowercase;
+        }
+
 
     /*
     /*  LINK STYLING  */
 
         a {
-            color: getColor("foreground", "base");
+            color: inherit;
             text-decoration: underline;
+            
+            transition: color .2s ease;
             
             &:hover,
             &:active,

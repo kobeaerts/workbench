@@ -25,7 +25,7 @@ var sourcemaps = require('gulp-sourcemaps');
                 autoprefixer: true,
                 fallbacks: true
             }))
-            .pipe(minify())
+            .pipe(minify({processImport: false}))
             .pipe(rename('styles.min.css'))
 			.pipe(base64({
 				maxImageSize: 8*1024,

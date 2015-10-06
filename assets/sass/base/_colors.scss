@@ -13,4 +13,12 @@
 
     @function getColor($color, $tone: "base") {
         @return map-get(map-get($colors, $color), $tone);
-    } 
+    }
+
+    @function getShade($color) {
+        @return mix($color, #000, 80%);   
+    }
+
+    @function getTint($color) {
+        @return mix($color, #fff, 80%);   
+    }
